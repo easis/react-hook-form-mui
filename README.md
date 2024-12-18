@@ -31,7 +31,6 @@ components:
 * SwitchElement
 * PasswordElement
 * DatePickerElement
-* DateTimePickerElement
 * SliderElement
 * ToggleButtonGroupElement
 
@@ -57,9 +56,7 @@ This package utilizes pickers and icons of the MUI ecosystem. If you make use of
 
 From versions >= 3.x of this package MUI v5 is in use. Versions of 1 & 2 using Material-UI v4
 
-From version >= 6 x-date-pickers version 6 is in use. Make sure you upgrade your dependencies.
-
-### Simple form setup
+### Your component code
 
 ```tsx
 import {FormContainer, TextFieldElement} from 'react-hook-form-mui'
@@ -76,49 +73,7 @@ function Form() {
 }
 ```
 
-### Typesafe form setup
-
-```tsx
-  function Form() {
-    const {control, handleSubmit} = useForm({
-      defaultValues: {
-        name: '',
-        auto: '',
-        check: false
-      },
-    })
-    const options = [
-      {id: 'one', label: 'One'},
-      {id: 'two', label: 'Two'},
-      {id: 'three', label: 'Three'},
-    ]
-    return (
-        <form onSubmit={handleSubmit((data) => console.log(data))} noValidate>
-          <Stack spacing={2}>
-            <TextFieldElement
-              name={'name'}
-              label={'Name'}
-              control={control}
-              required
-              fullWidth
-            />
-            <AutocompleteElement
-              name={'auto'}
-              label={'Autocomplete'}
-              control={control}
-              options={options}
-            />
-            <CheckboxElement name={'check'} label={'Check'} control={control} />
-            <Button type={'submit'} color={'primary'}>
-              Submit
-            </Button>
-          </Stack>
-        </form>
-    )
-  }
-```
-
-You can have a look at all different possibilities to use forms at following [`code examples`](apps/storybook/stories/FormContainer.stories.tsx)
+You can have a look at the [`example`](apps/nextjs/) folder which sets up NextJS with `react-hook-form-mui`
 
 ### FormContainer creates `formContext`
 
@@ -161,39 +116,3 @@ const MySubmit = () => {
 ### Bundle
 
 This project uses `tsup` to wrap the package for `npm`.
-
-
-### Support Maintanance
-If you find this package useful consider a small contribution:
-[Buy Me A Coffee](https://www.buymeacoffee.com/dohomi)
-
-### Contributing
-
-Make sure you're running Node.js 20
-
-1. Clone this repository
-
-```bash
-git clone https://github.com/dohomi/react-hook-form-mui.git
-cd react-hook-form-mui
-```
-
-2. Install dependencies
-
-```bash
-yarn
-```
-
-3. Build the project
-
-```bash
-yarn build
-```
-
-4. Run the storybook
-
-```bash
-yarn sb-start
-```
-
-Changes to storybook stories can be made in `apps/storybook/stories`. Changes to the library can be made in `packages/rhf-mui`.
