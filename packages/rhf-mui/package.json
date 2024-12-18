@@ -1,7 +1,7 @@
 {
   "version": "7.4.1",
   "license": "MIT",
-  "repository": "https://github.com/dohomi/react-hook-form-mui",
+  "repository": "https://github.com/easis/react-hook-form-mui",
   "homepage": "https://react-hook-form-material-ui.vercel.app",
   "keywords": ["react", "mui", "material-ui", "react-hook-form"],
   "workspaces": ["apps/*", "packages/*"],
