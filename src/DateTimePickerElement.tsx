@@ -17,7 +17,7 @@ import {
   UseControllerProps,
 } from 'react-hook-form'
 import {TextFieldProps, useForkRef} from '@mui/material'
-import {FieldValues} from 'react-hook-form/dist/types/fields'
+import {FieldValues} from 'react-hook-form'
 import {useFormError} from './FormErrorProvider'
 import {forwardRef, ReactNode, Ref, RefAttributes} from 'react'
 import {defaultErrorMessages} from './messages/DateTimePicker'
