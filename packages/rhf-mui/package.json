@@ -47,7 +47,7 @@
     "@mui/icons-material": ">= 5.x <7",
     "@mui/material": ">= 5.x <7",
     "@mui/x-date-pickers": ">=7.17.0 <8",
-    "react": ">=17 <19",
+    "react": ">=17 <=19",
     "react-hook-form": ">=7.33.1"
   },
   "peerDependenciesMeta": {
