@@ -42,6 +42,9 @@ export type {ToggleButtonGroupElementProps} from './ToggleButtonGroupElement'
 export {default as TextareaAutosizeElement} from './TextareaAutosizeElement'
 export type {TextareaAutosizeElementProps} from './TextareaAutosizeElement'
 
+export {default as DatePickerElement} from './DatePickerElement'
+export type {DatePickerElementProps} from './DatePickerElement'
+
 export {FormErrorProvider} from './FormErrorProvider'
 export type {FormErrorProviderProps} from './FormErrorProvider'
 export {useFormError} from './FormErrorProvider'
